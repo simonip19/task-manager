@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #ebe4e4;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container {
+    width: 500px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #3a2a3e;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#taskInput,
+#searchInput {
+    border: 1px solid #3a2a3e;
+    border-radius: 2px;
+    padding: 5px 8px;
+    height: 25px;
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.operations-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.operations-header #searchInput {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.filters button {
+    border: 1px solid #3a2a3e;
+    border-radius: 20px;
+    margin: 0 4px;
+    font-size: 11px;
+    padding: 7px;
+    min-width: 50px;
+    color: #3a2a3e
+}
+
+.filters button.active {
+    background: #3a2a3e;
+    color: #fff;
+}
+
+.filters span {
+    font-size: 12px;
+}
+
+#addBtn {
+    flex: 0 0 24%;
+    max-width: 24%;
+    padding: 10px;
+    border: 1px solid #b8afaf;
+    border-radius: 2px;
+    background: #ebe4e4;
+    color: #3a2a3e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-height: 180px;
+    overflow: auto;
+
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+li.no-tasks {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.mark-complete,
+.delete {
+    padding: 4px 10px;
+    border: 1px solid #b8afaf;
+    border-radius: 2px;
+    background: #ebe4e4;
+    color: #3a2a3e;
+    font-size: 11px;
+}
+
+.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.completed button.mark-complete {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.stats {
+    font-size: 13px;
+    margin-top: 50px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Toggle switch styles */
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 58px;
+    height: 32px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+    content: "";
+}
+
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background: #56c080;
+}
+
+.toggle-checkbox:checked+.toggle-switch:before {
+    left: 30px;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle-label {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+/* Dark mode styles */
+.dark {
+    background: #3a2a3e;
+    color: white;
+}
+
+.dark .toggle span,
+.dark h1,
+.dark h2,
+.dark li,
+.dark #stats,
+.dark .filters span {
+    color: #3a2a3e;
+}
+
+.dark #addBtn {
+    background: #3a2a3e;
+    color: #fff;
+    border-color: #3a2a3e;
+}
+
+/* Media qureries for responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .toggle span {
+        display: none;
+    }
+
+    .operations-header #searchInput {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #stats {
+        font-size: 14px;
+    }
+}

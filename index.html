@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Smart Task Manager</h1>
+            <label class="toggle">
+                <span>Theme</span>
+                <input id="themeToggle" class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"></div>
+            </label>
+        </div>
+        <h2>Create tasks</h2>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Enter task..." />
+            <button id="addBtn">Add</button>
+        </div>
+
+        <div class="task-operations">
+            <div class="operations-header">
+                <input type="text" id="searchInput" placeholder="Search tasks..." />
+
+                <div class="filters">
+                    <span>Filter by:</span>
+                    <button data-filter="all">All</button>
+                    <button data-filter="completed">Completed</button>
+                    <button data-filter="pending">Pending</button>
+                </div>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <div id="stats"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
