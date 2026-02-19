@@ -4,6 +4,8 @@ A modular, production-style Task Manager built with **Vanilla JavaScript (ES6+)*
 
 This project was built to showcase deep understanding of JavaScript fundamentals without relying on frameworks.
 
+[netlify](https://69975c35e186291539d1bfc2--spiffy-semolina-5c9e5b.netlify.app/)
+
 
 ## Features
 
